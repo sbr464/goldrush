@@ -1,0 +1,34 @@
+body {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	background-color: #CCC;
+
+}
+
+.mainContainer {
+position: absolute;
+z-index: 10;
+}
+
+.map {
+	width: 100%;
+}
+
+.marker {
+	width: 45px;
+	position: absolute;
+	display: block;
+	z-index: 1000;
+}
+
+.hidden {
+	display: none;
+}
+
+button {
+	position: absolute;
+	left: 200px;
+	top: 200px;
+}
