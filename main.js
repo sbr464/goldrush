@@ -15,17 +15,18 @@ var currentMarkerTop;
   	});
 
 
+    $('.mainContainer').on("click", "img.marker", function(e){
+      e.stopPropagation();
+      $(this).css('display', 'none');
+    });
 
 
-  	$('.mainContainer').click(function(){
-  		  	$('img.marker').click(function(){
-  		$(this).css('display', 'none');
-  	});
+  	$('.mainContainer').click(function(){    
+
   		currentMarkerLeft = (event.pageX - pinPointX) / windowWidth * 100;
   		currentMarkerTop = (event.pageY - pinPointY) / windowHeight * 100;
-		$(this).append('<img class="marker" src="img/marker.png" style="left: ' + currentMarkerLeft +  '%; top: ' + currentMarkerTop + '%;">');
+		$(this).append('<img class="marker" src="img/marker.png" style="left: '
+       + currentMarkerLeft +  '%; top: ' + currentMarkerTop + '%;">');
   	});
-
-
 
 });
